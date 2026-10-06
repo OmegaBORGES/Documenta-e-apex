@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documenta-e APEX: base de conhecimento em português sobre Oracle APEX, das versões HTML DB até as mais recentes.">
+    <meta name="theme-color" content="#0d0d48">
+    <title>Documentae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            var t = localStorage.getItem('documentae-tema');
+            if (t === 'escuro' || t === 'claro') document.documentElement.setAttribute('data-tema', t);
+        } catch (e) {}
+    </script>
+</head>
+<body>
+
+    <header class="navbar" id="topo">
+        <div class="navbar-acoes"></div>
+
+        <div class="navbar-centro">
+            <a href="#/" class="title-link"><h1 class="title">Documenta-e <span>APEX</span></h1></a>
+            <p class="subtitulo">Tudo sobre Oracle APEX em um só lugar &mdash; dos tempos do HTML DB até a versão mais recente.</p>
+
+            <form class="busca" id="form-busca" role="search" autocomplete="off">
+                <svg class="busca-icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                <input type="search" class="search" id="campo-busca"
+                       placeholder="Pesquise qualquer coisa: Interactive Grid, APEX_EXEC, ORDS, versão 24.2..."
+                       aria-label="Pesquisar na documentação" aria-autocomplete="list" aria-controls="sugestoes" aria-expanded="false">
+                <kbd class="busca-atalho" title="Pressione / para pesquisar">/</kbd>
+                <div class="sugestoes" id="sugestoes" role="listbox" hidden></div>
+            </form>
+
+            <nav class="menu" aria-label="Navegação principal">
+                <a href="#/" data-rota="inicio">Início</a>
+                <a href="#/topicos" data-rota="topicos">Tópicos</a>
+                <a href="#/versoes" data-rota="versoes">Versões</a>
+                <a href="#/glossario" data-rota="glossario">Glossário</a>
+                <a href="#/faq" data-rota="faq">Perguntas frequentes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo" class="conteudo" tabindex="-1"></main>
+
+    <footer class="rodape">
+        <p><strong>Documenta-e APEX</strong> &middot; conteúdo comunitário de estudo sobre Oracle APEX.</p>
+        <p class="rodape-nota">Oracle, Oracle APEX e marcas relacionadas pertencem à Oracle Corporation. Este material não é oficial; consulte sempre a <a href="https://docs.oracle.com/en/database/oracle/apex/" target="_blank" rel="noopener">documentação oficial</a> para detalhes definitivos.</p>
+        <p class="rodape-autor">Desenvolvido por <strong>Gustavo Borges</strong></p>
+    </footer>
+
+    <button type="button" class="voltar-topo" id="voltar-topo" aria-label="Voltar ao topo" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+    </button>
+
+    <script src="js/dados/base.js"></script>
+    <script src="js/dados/versoes.js"></script>
+    <script src="js/dados/topicos-fundamentos.js"></script>
+    <script src="js/dados/topicos-instalacao.js"></script>
+    <script src="js/dados/topicos-app-builder.js"></script>
+    <script src="js/dados/topicos-componentes.js"></script>
+    <script src="js/dados/topicos-itens.js"></script>
+    <script src="js/dados/topicos-dinamico.js"></script>
+    <script src="js/dados/topicos-plsql.js"></script>
+    <script src="js/dados/topicos-seguranca.js"></script>
+    <script src="js/dados/topicos-integracao.js"></script>
+    <script src="js/dados/topicos-ui.js"></script>
+    <script src="js/dados/topicos-ia.js"></script>
+    <script src="js/dados/topicos-processos.js"></script>
+    <script src="js/dados/topicos-devops.js"></script>
+    <script src="js/dados/topicos-globalizacao.js"></script>
+    <script src="js/dados/topicos-performance.js"></script>
+    <script src="js/dados/topicos-boas-praticas.js"></script>
+    <script src="js/dados/glossario.js"></script>
+    <script src="js/dados/faq.js"></script>
+
+    <script src="js/markdown.js"></script>
+    <script src="js/busca.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
